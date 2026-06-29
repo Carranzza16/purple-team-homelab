@@ -17,9 +17,9 @@ Wazuh logs and classifies it.
    `/var/log/auth.log` and restarted `wazuh-manager`
 4. Verified detection worked with a manual failed SSH login first
 5. Ran Hydra against a non-existent user:
-   `hydra -l adriana -P wordlist.txt ssh://<target-ip>`
-6. Ran Hydra against a real, existing user with wrong passwords:
-   `hydra -l <real-user> -P wordlist.txt ssh://<target-ip>`
+   `hydra -l adriana -P wordlist.txt ssh://192.168.100.16`
+7. Ran Hydra against a real, existing user with wrong passwords:
+   `hydra -l <real-user> -P wordlist.txt ssh://192.168.100.16`
 
 ## Findings
 - Attempts against the non-existent user were logged as
