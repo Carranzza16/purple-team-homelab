@@ -11,7 +11,7 @@ Wazuh detects it.
 
 ## Steps
 1. Verified connectivity between VMs with `ping`
-2. Ran: `nmap -sV -p 1-1000 <target-ip>`
+2. Ran: `nmap -sV -p 1-1000 192.168.100.16
 3. Checked Wazuh dashboard (Threat Hunting) for related alerts
 
 ## Findings
