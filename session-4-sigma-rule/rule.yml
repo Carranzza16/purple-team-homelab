@@ -1,3 +1,18 @@
+# Comparison with Wazuh's native rule (ID 5763 / base 5760):
+# - Wazuh native: 8 failed attempts within a 120s window, grouped by
+#   same_source_ip, with a 60s cooldown to avoid re-alerting
+# - This Sigma rule: 10 attempts within a 300s window (more conservative)
+#
+# Insight: Wazuh's native threshold would trigger faster than this
+# Sigma rule in a real attack scenario. A tighter timeframe + lower
+# threshold increases detection speed but also raises the risk of
+# false positives — this is the core trade-off in tuning brute force
+# detection rules.
+
+title: SSH Brute Force - Multiple Failed Logins
+id: 7f3a9b2c-4e1d-4a6f-9c8b-1d2e3f4a5b6c
+...
+
 title: SSH Brute Force - Multiple Failed Logins
 id: 7f3a9b2c-4e1d-4a6f-9c8b-1d2e3f4a5b6c
 status: experimental
