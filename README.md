@@ -26,7 +26,7 @@ additional tooling.
 | [Session 1](./session-1-wazuh-install) | Wazuh installation | ✅ Done |
 | [Session 2](./session-2-nmap-scan) | Port scanning detection | ✅ Done |
 | [Session 3](./session-3-ssh-bruteforce) | SSH brute force detection | ✅ Done |
-| Session 4 | Sigma rule writing | 🔜 Next |
+| [Session 4](./session-4-sigma-rule) | Sigma rule writing | ✅ Done |
 
 ## Key takeaway across sessions
 
