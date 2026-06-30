@@ -1,0 +1,30 @@
+title: SSH Brute Force - Multiple Failed Logins
+id: 7f3a9b2c-4e1d-4a6f-9c8b-1d2e3f4a5b6c
+status: experimental
+description: >
+    Detects multiple failed SSH authentication attempts from the same
+    source within a short time window, indicating a possible brute
+    force attack. Based on hands-on testing with Hydra against an
+    SSH service monitored by Wazuh.
+author: Jesus Carranza Mendoza
+date: 2026-06-29
+references:
+    - https://github.com/[tu-usuario]/purple-team-homelab
+logsource:
+    category: authentication
+    product: linux
+    service: sshd
+detection:
+    selection:
+        logsource: sshd
+        message|contains: 'Failed password'
+    timeframe: 5m
+    condition: selection | count() by src_ip > 10
+falsepositives:
+    - Legitimate user repeatedly mistyping their password
+    - Automated scripts/services misconfigured with wrong credentials
+    - Shared service accounts with rotated credentials not yet updated
+level: high
+tags:
+    - attack.credential_access
+    - attack.t1110.001
