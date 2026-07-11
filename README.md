@@ -27,6 +27,14 @@ additional tooling.
 | [Session 2](./session-2-nmap-scan) | Port scanning detection | ✅ Done |
 | [Session 3](./session-3-ssh-bruteforce) | SSH brute force detection | ✅ Done |
 | [Session 4](./session-4-sigma-rule) | Sigma rule writing | ✅ Done |
+| [Session 5](./session-5-suricata-nids) | Suricata NIDS integration | ✅ Done |
+| [Session 6](./session-6-web-attacks) | Web application attacks | ✅ Done |
+| Session 7 | Reverse shell | 🔜 Next |
+| Session 8 | Privilege escalation | 🔜 Pending |
+| Session 9 | Persistence and backdoor | 🔜 Pending |
+| Session 10 | Detection engineering | 🔜 Pending |
+| Session 11 | Lateral movement | 🔜 Pending |
+| Session 12 | Full attack simulation | 🔜 Pending 
 
 ## Key takeaway across sessions
 
